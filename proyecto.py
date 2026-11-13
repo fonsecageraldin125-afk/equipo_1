@@ -32,6 +32,27 @@ def limpiar():
 
     for elemento in tabla.selection():
         tabla.selection_remove(elemento)
+# Tomas Martinez Zuri Naomi: Nombres del equipo
+
+pie = tk.Frame(ventana, bg=AZUL, pady=10)
+pie.pack(fill="x")
+
+tk.Label(
+    pie,
+    text="FICHA DEL ALUMNO | EQUIPO 1",
+    bg=AZUL,
+    fg=NARANJA,
+    font=("Arial", 11, "bold")
+).pack()
+
+tk.Label(
+    pie,
+    text="Grande Fonseca Denise Geraldin | Cayetano Fonseca Samadhi | Espino Chavez Leonardo Franco | Silva Velasco Leticia Alexa | Tomas Martinez Zuri Naomi",
+    bg=AZUL,
+    fg=BLANCO,
+    font=("Arial", 8),
+    wraplength=950
+).pack(pady=4)
 ventana = tk.Tk()
 ventana.title("Ficha del alumno")
 ventana.geometry("1000x720")
