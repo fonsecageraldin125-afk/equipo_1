@@ -40,6 +40,37 @@ estilo.map(
     foreground=[("selected", TEXTO)]
 )
 
+# Espino Chavez Leonardo Franco: Aviso si faltan datos
+
+def validar_datos():
+    if not nombre.get().strip():
+        aviso.config(text="FALTA ESCRIBIR EL NOMBRE DEL ALUMNO")
+        entrada_nombre.focus()
+        return False
+
+    if not grupo.get().strip():
+        aviso.config(text="FALTA ESCRIBIR EL GRUPO")
+        entrada_grupo.focus()
+        return False
+
+    if not numero_lista.get().strip():
+        aviso.config(text="FALTA ESCRIBIR EL NUMERO DE LISTA")
+        entrada_lista.focus()
+        return False
+
+    if not numero_lista.get().isdigit():
+        aviso.config(text="EL NUMERO DE LISTA DEBE SER NUMERICO")
+        entrada_lista.focus()
+        return False
+
+    if int(numero_lista.get()) <= 0:
+        aviso.config(text="EL NUMERO DE LISTA DEBE SER MAYOR QUE CERO")
+        entrada_lista.focus()
+        return False
+
+    aviso.config(text="")
+    return True
+
 # Grande Fonseca Denise Geraldin: Proyecto inicial y estructura principal
 
 def conectar():
