@@ -39,6 +39,7 @@ estilo.map(
     foreground=[("selected", TEXTO)]
 )
 
+
 # Grande Fonseca Denise Geraldin: Proyecto inicial y estructura principal
 
 def conectar():
