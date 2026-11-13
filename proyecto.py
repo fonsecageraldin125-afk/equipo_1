@@ -3,7 +3,8 @@ from tkinter import ttk, messagebox
 import mysql.connector
 from mysql.connector import Error
 
-# Cayetano Fonseca Samadhi: Colores y nombre del equipo
+# Cayetano Fonseca Samadhi: Colores y
+ nombre del equipo
 
 AZUL = "#7C2D12"
 AZUL_CLARO = "#FFEDD5"
