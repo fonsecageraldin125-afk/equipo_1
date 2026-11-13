@@ -13,7 +13,25 @@ def conectar():
         database="ficha_alumnos"
     )
 
+# Silva Velasco Leticia Alexa: Boton Limpiar
 
+def limpiar():
+    global id_seleccionado
+
+    nombre.set("")
+    grupo.set("")
+    numero_lista.set("")
+
+    id_seleccionado = None
+
+    aviso.config(text="")
+
+    resultado.config(state="normal")
+    resultado.delete("1.0", tk.END)
+    resultado.config(state="disabled")
+
+    for elemento in tabla.selection():
+        tabla.selection_remove(elemento)
 ventana = tk.Tk()
 ventana.title("Ficha del alumno")
 ventana.geometry("1000x720")
